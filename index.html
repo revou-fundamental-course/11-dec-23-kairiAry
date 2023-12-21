@@ -6,35 +6,91 @@
     <title>SMKN 1 KOTABARU</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body onload="menampilkanAlert()">
     <nav>
-        <img src="" alt="logo" class="logo">
+        <img src="assets/honkai.png" alt="logo" class="logo">
         <ul class="ul-nav">
-            <li>Home</li>
-            <li>About</li>
-            <li>contact</li>
+            <li style="border-right: 1px solid black ;"><a href="">Home</a></li>
+            <li style="border-right: 1px solid black ;"><a href="">Our Profile</a></li>
+            <li><a href="">Message Us</a></li>
         </ul>
     </nav>
     <header>
-        <h2>Hi Wirr, welcome to my website</h2>
-        <h4>Ini latihan pertama</h4>
-        <img src="assets/honkai.png" alt="">
+        <h2>Hi <span id="usersName" ></span>, welcome to my website</h2>
+        <h4>Ini adalah website latihan pertama</h4><br>
+        <div class="img-slide">
+            <img src="assets/honkai.png" alt="">
+        </div>
     </header><br>
-    <h4>Fasilitas</h4>
     <div class="facilities">
-        <div>
-            <div class="circle" style="background-image: url('assets/honkai.png');"></div>
-            <h4>gym area</h4>
-        </div>
-        <div>
-            <div class="circle" style="background-image: url('');"></div>
-            <h4>Canteen</h4>
-        </div>
-        <div>
-            <div class="circle" style="background-image: url('');"></div>
-            <h4>Pool</h4>
+        <h3>Fasilitas</h3>
+        <div class="images">
+            <div>
+                <div class="circle" style="background-image: url('assets/honkai.png');"></div>
+                <h4>gym area</h4>
+            </div>
+            <div>
+                <div class="circle" style="background-image: url('assets/honkai.png');"></div>
+                <h4>Canteen</h4>
+            </div>
+            <div>
+                <div class="circle" style="background-image: url('assets/honkai.png');"></div>
+                <h4>Pool</h4>
+            </div>
         </div>
     </div>
-    <footer></footer>
+    <div class="container float-container">
+        <h3>Message Us</h3>
+        <div class="float-child">
+            <h4>Form Pengisian</h4>
+            <form form action="" method="post">
+            <div class="row">
+            <div class="col-25">
+                <label for="nama">Nama :</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="nama" name="nama" placeholder="Nama Anda" required>
+            </div>
+            </div>
+            <div class="row">
+            <div class="col-25">
+                <label for="tanggal">Tanggal Lahir :</label>
+            </div>
+            <div class="col-75">
+                <input type="date" id="tanggal" name="tanggal" required>
+            </div>
+            </div>
+            <div class="row">
+            <div class="col-25">
+                <label for="jenis_kelamin">Jenis Kelamin :</label>
+            </div>
+            <div class="col-75">
+                <label for="laki-laki"><input type="radio" id="laki-laki" name="jenis_kelamin" value="Laki-laki" required> Laki-laki</label>
+                <label for="perempuan"><input type="radio" id="perempuan" name="jenis_kelamin" value="Perempuan" required> Perempuan</label>
+            </div>
+            </div>
+            <div class="row">
+            <div class="col-25">
+                <label for="pesan">Pesan :</label>
+            </div>
+            <div class="col-75">
+                <textarea id="pesan" name="pesan" placeholder="Masukkan Pesan" style="height:200px" required></textarea>
+            </div>
+            </div>
+            <br>
+            <div class="row">
+                <button type="button"  id="submit" onclick="menampilkanData()">Submit</button>
+            </div>
+            </form>
+        </div>
+        <div class="float-child">
+            <h4>Result</h4>
+            <textarea id="subject" name="subject" style="height:400px"></textarea>
+        </div>
+    </div>
+    <footer>
+        <h6>Created By Kairi</h6>
+    </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
